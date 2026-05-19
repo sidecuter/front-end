@@ -21,6 +21,8 @@ RUN apk add --no-cache \
     sed \
     iputils \
     bind-tools \
+    bash \
+    busybox \
     && \
     rm -rf /var/cache/apk/*
 
