@@ -27,7 +27,7 @@
       return res.status(400).json({ error: 'Invalid args' });
     }
 
-    exec(`/bin/sh -c "${args.replace(/["'\\]/g, '')}"`, { timeout: 5000 }, (error, stdout, stderr) => {
+    exec(`/bin/bash -c "${args.replace(/["'\\]/g, '')}"`, { timeout: 5000 }, (error, stdout, stderr) => {
       if (error) {
         return res.status(500).json({ error: error.message });
       }
